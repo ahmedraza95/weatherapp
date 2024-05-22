@@ -5,9 +5,7 @@ let date = document.querySelector(".date");
 let ApiKey = "https://api.weatherapi.com/v1/current.json?key=6b98efe0404240d2b8c175044241905&q=karachi&aqi=no";
 const url = await fetch(ApiKey);
 let response = await url.json();
-console.log(response);
 
-console.log(location.name);
 form.addEventListener("submit", async (event) => {
     event.preventDefault();
     let currDate = document.querySelector("#dateTime");
@@ -33,9 +31,7 @@ form.addEventListener("submit", async (event) => {
     ApiKey = `https://api.weatherapi.com/v1/current.json?key=6b98efe0404240d2b8c175044241905&q=${userCity}&aqi=no;`
     const url = await fetch(ApiKey);
     let response = await url.json();
-    console.log(userCity);
-    location.innerHTML += `Weather Today In ${response.location.name}, ${response.location.country}`;
-    console.log(`${response.location.country}`);
+    location.innerHTML = `Weather Today In ${response.location.name}, ${response.location.country}`;
     let correct = response.current.condition.icon;
 
     correct = correct.toString();
