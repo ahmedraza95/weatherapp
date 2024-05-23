@@ -30,7 +30,6 @@
     align-items: center;
     flex-direction: column;
     /* justify-content: center; */
-    height: 80vh;
     position: absolute;
     transform: translate(-50%, -50%);
     top: 50%;
@@ -63,7 +62,7 @@ form {
 
 .row {
     width: 80%;
-    margin-top: 4%;
+    margin-top: 2%;
     justify-content: space-between;
     font-size: 25px;
     display: flex;
@@ -230,6 +229,7 @@ form {
 
 .row {
     height: 40vh;
+    width: 60% !important;
 }
 
 /* input  */
