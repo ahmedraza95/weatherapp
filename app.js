@@ -5,11 +5,12 @@ let date = document.querySelector(".date");
 let ApiKey = "https://api.weatherapi.com/v1/current.json?key=6b98efe0404240d2b8c175044241905&q=karachi&aqi=no";
 const url = await fetch(ApiKey);
 let response = await url.json();
-
+let row = document.querySelector(".row")
 form.addEventListener("submit", async (event) => {
     event.preventDefault();
 
     try {
+
 
 
 
@@ -37,8 +38,11 @@ form.addEventListener("submit", async (event) => {
         ApiKey = `https://api.weatherapi.com/v1/current.json?key=6b98efe0404240d2b8c175044241905&q=${userCity}&aqi=no;`
         const url = await fetch(ApiKey);
         let response = await url.json();
+        row.style.display = "flex";
+        
         location.innerHTML = `Weather Today In ${response.location.name}, ${response.location.country}`;
         let correct = response.current.condition.icon;
+        location.style.height = "auto";
 
         correct = correct.toString();
         correct = correct.split("/");
@@ -66,10 +70,11 @@ form.addEventListener("submit", async (event) => {
 
     } catch (error) {
 
-        location.innerHTML = `<img src="./imsges/pressuer.png" sorry`;
         console.log(error);
         // form.addEventListener("submit", async (event) => {
-        console.log(sweetAlert("City Is not Found", "Please Input Correct City!", "error"));
+            console.log(sweetAlert("City Is not Found", "Please Input Correct City!", "error"));
+            row.style.display = "none";
+            location.innerHTML = `<h1>City Not Found.......</h1>`;
 
     }
 
