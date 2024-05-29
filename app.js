@@ -9,13 +9,16 @@ setInterval(() => {
     let time12 = date1[1]
     time12 = time12.split(":")
     if (time12[0] > 12) {
-        timediv.innerHTML = `${time12[0] - 12} :  ${+ time12[1]}  :  ${+ time12[2]} Pm`
-    } else if (time12[0] = 12) {
+        timediv.innerHTML = `${time12[0] - 12} :  ${+ time12[1]}  :  ${time12[2]} am`
+        console.log("hello");
+    } else if (time12[0] === 12) {
         timediv.innerHTML = `${time12[0]} :  ${+ time12[1]}  :  ${+ time12[2]} Pm`
 
     } else {
-        timediv.innerHTML = `${time12[0]} :  ${+ time12[1]}  :  ${+ time12[2]} am`
+        timediv.innerHTML = `${time12[0]} :  ${+ time12[1]}  :  ${time12[2]}`
     }
+
+
     let resul = `${time12[0] - 12}  `
     date.innerHTML = date1[0];
 
@@ -26,14 +29,13 @@ setInterval(() => {
 
 
 let card = document.querySelector("#card");
-let row = document.querySelector(".row")
+let location = document.querySelector(".location");
 form.addEventListener("submit", async (event) => {
     event.preventDefault();
 
     try {
-        let location = document.querySelector(".location");
-        location.style.display = "inline"
-
+        let row = document.querySelector(".row");
+        location.style.display = "inline";
 
 
 
@@ -45,23 +47,33 @@ form.addEventListener("submit", async (event) => {
         let divtemp3 = document.querySelector("#div3")
         let divtemp4 = document.querySelector("#div4")
         let div5temp = document.querySelector("#div5")
-        // let divtemp6 = document.querySelector("#div6")
         let div1value = document.querySelector("#div1value")
         let div2value = document.querySelector("#div2value")
         let div3value = document.querySelector("#div3value")
         let div4value = document.querySelector("#div4value")
         let div5value = document.querySelector("#div5value")
-        // let div6value = document.querySelector("#div6value")
         let divtemp5 = document.querySelector(".weather");
+        divtemp5.innerHTML = "";
+        divtemp1.innerHTML = "";
+        divtemp2.innerHTML = "";
+        divtemp3.innerHTML = "";
+        divtemp4.innerHTML = "";
+        div1value.innerHTML = "";
+        div2value.innerHTML = "";
+        div3value.innerHTML = "";
+        div4value.innerHTML = "";
+        div5value.innerHTML = "";
+        div5temp.innerHTML = "";
+
 
 
         let ApiKey = `https://api.weatherapi.com/v1/current.json?key=6b98efe0404240d2b8c175044241905&q=${userCity}&aqi=no;`
         const url = await fetch(ApiKey);
         let response = await url.json();
-        row.style.display = "flex";
+
         card.style.height = "auto";
 
-
+        row.style.display = "flex";
         location.innerHTML = `Weather Today In ${response.location.name}, ${response.location.country}`;
         let correct = response.current.condition.icon;
         location.style.height = "auto";
@@ -90,18 +102,20 @@ form.addEventListener("submit", async (event) => {
         div5value.innerHTML = `<img src="./imsges/right-arrow.png" alt=""> ${response.current.pressure_mb.toFixed(1)} mb`
         // div1value = "Hello";
 
+
+
     }
     catch (error) {
-        row.innerHTML = "";
-        location.innerHTM = "";
-        
+        let row = document.querySelector(".row")
+
 
         console.log(error);
+        // div5temp.style.display = "none";
         // form.addEventListener("submit", async (event) => {
         console.log(sweetAlert("City Is not Found", "Please Input Correct City!", "error"));
         row.style.display = "none";
         location.innerHTML = `<h1>City Not Found.......</h1>`;
-        card.style.height = "60vh";
+        card.style.height = "40vh";
 
     }
 

@@ -26,7 +26,7 @@
 #card {
     padding: 2%;
     width: 60%;
-    height: 50vh;
+    height: 40vh;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -67,7 +67,7 @@ form {
     margin-top: 2%;
     justify-content: space-between;
     font-size: 25px;
-    display: flex;
+    /* display: flex; */
     flex-direction: column;
     display: none;
 }
@@ -95,7 +95,7 @@ form {
     width: 100%;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.349);
+    border-bottom: none;
 }
 
 .value {
@@ -480,5 +480,3 @@ form {
         clip-path: inset(0 0 0 100%);
     }
 }
-
-/* loader end  */
