@@ -15,7 +15,7 @@ setInterval(() => {
         timediv.innerHTML = `${time12[0]} :  ${+ time12[1]}  :  ${+ time12[2]} Pm`
 
     } else {
-        timediv.innerHTML = `${time12[0]} :  ${+ time12[1]}  :  ${time12[2]} Am`
+        timediv.innerHTML = `${time12[0]} :  ${+ time12[1]}  :  ${time12[2]} Pm`
     }
 
 
@@ -31,17 +31,19 @@ setInterval(() => {
 let card = document.querySelector("#card");
 let location = document.querySelector(".location");
 let loader = document.querySelector("#wifi-loader");
+let userCity = document.querySelector("#Email");
 form.addEventListener("submit", async (event) => {
     event.preventDefault();
 
     try {
         let row = document.querySelector(".row");
         location.style.display = "inline";
-
+        userCity = userCity.value;
+        
 
 
         let currDate = document.querySelector("#dateTime");
-        let userCity = document.querySelector("#Email").value;
+
         let form = document.querySelector("#form")
         let divtemp1 = document.querySelector("#div1")
         let divtemp2 = document.querySelector("#div2")
@@ -120,7 +122,8 @@ form.addEventListener("submit", async (event) => {
         div5temp.innerHTML = `<img src="./imsges/pressuer.png" width="10%" alt=""> Pressure`
         div5value.innerHTML = `<img src="./imsges/right-arrow.png" alt=""> ${response.current.pressure_mb.toFixed(1)} mb`
         // div1value = "Hello";
-
+        
+        document.querySelector("#Email").value = "";
 
 
     }
@@ -139,7 +142,10 @@ form.addEventListener("submit", async (event) => {
         row.style.display = "none";
         location.innerHTML = `<h1>City Not Found.......</h1>`;
         card.style.height = "40vh";
+        document.querySelector("#Email").value = "";
+        // userCity.value = "";
 
+    } finally {
     }
 
 

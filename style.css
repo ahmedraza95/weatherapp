@@ -8,6 +8,7 @@
 }
 
 * {
+    
     padding: 0%;
     margin: 0%;
     /* transition: 1s ease-in-out; */
@@ -41,8 +42,8 @@
     background: rgba(255, 255, 255, 0.384);
     border-radius: 16px;
     overflow: hidden;
-    background: rgb(102, 218, 156);
-    background: radial-gradient(circle, rgba(102, 218, 156, 1) 0%, rgba(237, 248, 255, 1) 57%, rgba(51, 177, 124, 1) 100%, rgba(74, 206, 235, 1) 100%, rgba(65, 180, 205, 1) 100%, rgba(251, 224, 224, 1) 100%);
+    background: rgb(109,181,196);
+    background: linear-gradient(90deg, rgba(109,181,196,1) 0%, rgb(48, 87, 218) 89%);
 }
 
     form {
@@ -62,7 +63,7 @@
 
     .location {
         display: none;
-        margin-top: 4%;
+        margin-top: 2%;
         font-size: 25px;
 
     }
@@ -238,7 +239,6 @@
 
 
 
-
     .row {
         height: 40vh;
         width: 60% !important;
@@ -259,8 +259,10 @@
         color: black;
         font-size: 15px;
         border: 1px solid rgb(230, 135, 18);
+        color: black;
         border-radius: 6px 0 0 6px;
-        background-color: transparent;
+        background-color: white;
+        outline: none;
     }
 
     .button--submit {
@@ -291,8 +293,8 @@
     #wifi-loader {
         --background: #62abff;
         --front-color: rgb(230, 135, 18);
-        --back-color: #c3c8de;
-        --text-color: #414856;
+        --back-color: rgb(48, 87, 218) 89%;
+        --text-color: white;
         width: 64px;
         height: 64px;
         border-radius: 50px;
