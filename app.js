@@ -31,14 +31,13 @@ setInterval(() => {
 let card = document.querySelector("#card");
 let location = document.querySelector(".location");
 let loader = document.querySelector("#wifi-loader");
-let userCity = document.querySelector("#Email");
 form.addEventListener("submit", async (event) => {
     event.preventDefault();
-
+    
     try {
+        let userCity = document.querySelector("#Email").value;
         let row = document.querySelector(".row");
         location.style.display = "inline";
-        userCity = userCity.value;
         
 
 
