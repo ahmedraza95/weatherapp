@@ -22,21 +22,25 @@
 #img1 img {
     transform: scale(1.1);
 }
+.overlap {
+    position: absolute;
+    top: 10%;
+}
 
 #card {
-    padding: 2%;
+    /* padding: 2%; */
     width: 60%;
     height: 40vh;
     display: flex;
     align-items: center;
     flex-direction: column;
-    background-image: url(./imsges/imgs.jpg);
     position: absolute;
     transform: translate(-50%, -50%);
     top: 50%;
     left: 50%;
     background: rgba(255, 255, 255, 0.384);
     border-radius: 16px;
+    overflow: hidden;
     background: rgb(102, 218, 156);
     background: radial-gradient(circle, rgba(102, 218, 156, 1) 0%, rgba(237, 248, 255, 1) 57%, rgba(51, 177, 124, 1) 100%, rgba(74, 206, 235, 1) 100%, rgba(65, 180, 205, 1) 100%, rgba(251, 224, 224, 1) 100%);
 }
@@ -58,7 +62,7 @@
 
     .location {
         display: none;
-        margin-top: 6%;
+        margin-top: 4%;
         font-size: 25px;
 
     }

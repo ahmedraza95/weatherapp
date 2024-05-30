@@ -15,7 +15,7 @@ setInterval(() => {
         timediv.innerHTML = `${time12[0]} :  ${+ time12[1]}  :  ${+ time12[2]} Pm`
 
     } else {
-        timediv.innerHTML = `${time12[0]} :  ${+ time12[1]}  :  ${time12[2]}`
+        timediv.innerHTML = `${time12[0]} :  ${+ time12[1]}  :  ${time12[2]} Am`
     }
 
 
@@ -131,7 +131,11 @@ form.addEventListener("submit", async (event) => {
         console.log(error);
         // div5temp.style.display = "none";
         // form.addEventListener("submit", async (event) => {
-        console.log(sweetAlert("City Is not Found", "Please Input Correct City!", "error"));
+        console.log(Swal.fire({
+            icon: "error",
+            title: "Oops...",
+            text: "Something went wrong!",
+          }));
         row.style.display = "none";
         location.innerHTML = `<h1>City Not Found.......</h1>`;
         card.style.height = "40vh";
