@@ -155,6 +155,12 @@
 
 
     }
+    .timee {
+        width: 40%;
+        display: flex;
+        justify-content:space-between;
+        align-items: center;
+    }
 
     @media screen and (min-width:200px) and (max-width:599px) {
         #img2 img {
@@ -264,6 +270,20 @@
         background-color: white;
         outline: none;
     }
+    .header {
+        width: 100%;
+        height: 10vh;
+        background-color: black;
+        position: absolute;
+        justify-content: space-between;
+        display: flex;
+        top: 0%;
+        color: white;
+    }
+    .header h1 {
+        color: white;
+    }
+
 
     .button--submit {
         min-height: 50px;
@@ -487,3 +507,9 @@
             clip-path: inset(0 0 0 100%);
         }
     }
+
+    .header {
+        align-items: center;
+        justify-content: space-around;
+    }
+    
