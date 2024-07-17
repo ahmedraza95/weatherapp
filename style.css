@@ -1,0 +1,603 @@
+.full {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    justify-content: center;
+    justify-items: center;
+
+}
+
+main {
+    width: 100%;
+}
+
+* {
+
+    padding: 0%;
+    color: white;
+    margin: 0%;
+    /* transition: 1s ease-in-out; */
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    box-sizing: border-box;
+}
+
+#card {
+    /* padding: 2%; */
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: #62abff;
+    background-image: url(./imsges/img2.jpg);
+    background-repeat: repeat-x, no-repeat;
+    background-position: left top, center top;
+
+
+
+}
+
+.div1 div:first-child {
+    filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(138deg) brightness(101%) contrast(104%);
+}
+
+.timing {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 2%;
+
+}
+
+.timing div {
+    border-radius: 10px;
+    background-color: #6389b4;
+    color: white;
+    padding: 1%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* margin-top: 15%; */
+}
+
+.timeparent {
+    display: flex;
+    justify-content: space-between;
+    width: 60%;
+    margin-top: 2%;
+    font-size: 20px;
+}
+
+.tempBig {
+    font-size: 5rem;
+
+}
+
+
+.location {
+    display: none;
+    justify-content: center;
+    margin-top: 4%;
+    font-size: 40px;
+    margin-left: 4%;
+
+
+
+}
+
+.row {
+    width: 30%;
+    height: 60vh;
+    margin-top: 5%;
+    justify-content: space-between;
+    font-size: 25px;
+    display: flex;
+    flex-direction: row;
+    display: none;
+}
+
+.row div {
+    width: 100%;
+    margin-top: 2%;
+}
+
+.weather {
+    display: flex;
+    width: 60%;
+    font-size: 20px;
+    align-items: center;
+
+}
+
+.done {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.condition {
+    font-size: 2rem;
+}
+
+.div1 {
+    display: flex;
+    border-radius: 10px;
+    padding: 2%;
+    height: 20vh;
+    flex-direction: column;
+    width: 24% !important;
+    background-color: #6389b4;
+    justify-content: center;
+    /* border: 1px solid black; */
+    align-items: center;
+}
+
+.div1 div {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.div1 div:last-child {
+    font-size: 1rem;
+}
+
+.value {
+    text-decoration: dashed;
+
+}
+
+
+
+@media screen and (min-width:200px) and (max-width:800px) {
+    #img2 {
+        display: inline;
+        overflow: hidden;
+        height: 100vh;
+
+    }
+
+    #img1 {
+        display: none;
+    }
+
+    * {
+        transition: 1s ease-in;
+    }
+
+    #img2 img {
+        transform: scale(1.6);
+
+
+    }
+
+
+
+}
+
+.timee {
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media screen and (min-width:200px) and (max-width:599px) {
+    #img2 img {
+        transform: scale(2);
+    }
+
+    .location {
+        font-size: 12px;
+    }
+
+    .div1 div {
+        font-size: 14px;
+    }
+
+    .div1 div img {
+        width: 20%;
+    }
+
+    .weather {
+        font-size: 12px;
+    }
+
+    * {
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+
+    .row {
+        height: 40vh;
+    }
+
+    #card {
+        width: 100%;
+
+    }
+
+    .timeparent {
+        font-size: 14px;
+    }
+
+    .button--submit {
+        font-size: 12px !important;
+        width: 40% !important;
+    }
+
+    .input {
+        font-size: 12px !important;
+    }
+
+
+}
+
+@media screen and (min-width:600px) and (max-width:900px) {
+    .location {
+        font-size: 17px;
+    }
+
+    .div1 div {
+        font-size: 20px;
+    }
+
+    .weather {
+        font-size: 17px;
+    }
+
+    .timeparent {
+        width: 80%;
+    }
+
+    .row {
+        height: 40vh;
+    }
+
+    #card {
+        width: 100%;
+    }
+}
+
+
+
+
+
+/* input  */
+.messageBox {
+    width: fit-content;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #6389b4;
+    padding: 0 15px;
+    color: white !important;
+    border-radius: 10px;
+    border: 1px solid rgb(63, 63, 63);
+}
+
+.messageBox:focus-within {
+    border: 1px solid rgb(110, 110, 110);
+}
+
+.fileUploadWrapper {
+    width: fit-content;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#file {
+    display: none;
+}
+
+.fileUploadWrapper label {
+    cursor: pointer;
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.fileUploadWrapper label svg {
+    height: 18px;
+}
+
+.fileUploadWrapper label svg path {
+    transition: all 0.3s;
+}
+
+.fileUploadWrapper label svg circle {
+    transition: all 0.3s;
+}
+
+.fileUploadWrapper label:hover svg path {
+    stroke: #fff;
+}
+
+.fileUploadWrapper label:hover svg circle {
+    stroke: #fff;
+    fill: #3c3c3c;
+}
+
+.fileUploadWrapper label:hover .tooltip {
+    display: block;
+    opacity: 1;
+}
+
+.tooltip {
+    position: absolute;
+    top: -40px;
+    display: none;
+    opacity: 0;
+    color: white;
+    font-size: 10px;
+    text-wrap: nowrap;
+    background-color: #6389b4;
+    padding: 6px 10px;
+    border: 1px solid #6389b4;
+    border-radius: 5px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.596);
+    transition: all 0.3s;
+}
+
+.messageInput {
+    width: 200px;
+    height: 100%;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    padding-left: 10px;
+    color: white;
+}
+
+.messageInput:focus~#sendButton svg path,
+.messageInput:valid~#sendButton svg path {
+    fill: #6389b4;
+    stroke: white;
+}
+
+#sendButton {
+    width: fit-content;
+    height: 100%;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+#sendButton svg {
+    height: 18px;
+    transition: all 0.3s;
+}
+
+#sendButton svg path {
+    transition: all 0.3s;
+}
+
+#sendButton:hover svg path {
+    fill: #6389b4;
+    stroke: white;
+}
+
+.imgi {
+    width: 80%;
+}
+
+/* loader start  */
+#wifi-loader {
+    --background: #62abff;
+    --front-color: rgb(230, 135, 18);
+    --back-color: rgb(48, 87, 218) 89%;
+    --text-color: white;
+    width: 64px;
+    height: 64px;
+    border-radius: 50px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#wifi-loader svg {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#wifi-loader svg circle {
+    position: absolute;
+    fill: none;
+    stroke-width: 6px;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    transform: rotate(-100deg);
+    transform-origin: center;
+}
+
+#wifi-loader svg circle.back {
+    stroke: var(--back-color);
+}
+
+#wifi-loader svg circle.front {
+    stroke: var(--front-color);
+}
+
+#wifi-loader svg.circle-outer {
+    height: 86px;
+    width: 86px;
+}
+
+#wifi-loader svg.circle-outer circle {
+    stroke-dasharray: 62.75 188.25;
+}
+
+#wifi-loader svg.circle-outer circle.back {
+    animation: circle-outer135 1.8s ease infinite 0.3s;
+}
+
+#wifi-loader svg.circle-outer circle.front {
+    animation: circle-outer135 1.8s ease infinite 0.15s;
+}
+
+#wifi-loader svg.circle-middle {
+    height: 60px;
+    width: 60px;
+}
+
+#wifi-loader svg.circle-middle circle {
+    stroke-dasharray: 42.5 127.5;
+}
+
+#wifi-loader svg.circle-middle circle.back {
+    animation: circle-middle6123 1.8s ease infinite 0.25s;
+}
+
+#wifi-loader svg.circle-middle circle.front {
+    animation: circle-middle6123 1.8s ease infinite 0.1s;
+}
+
+#wifi-loader svg.circle-inner {
+    height: 34px;
+    width: 34px;
+}
+
+#wifi-loader svg.circle-inner circle {
+    stroke-dasharray: 22 66;
+}
+
+#wifi-loader svg.circle-inner circle.back {
+    animation: circle-inner162 1.8s ease infinite 0.2s;
+}
+
+#wifi-loader svg.circle-inner circle.front {
+    animation: circle-inner162 1.8s ease infinite 0.05s;
+}
+
+#wifi-loader .text {
+    position: absolute;
+    bottom: -40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: lowercase;
+    font-weight: 500;
+    font-size: 14px;
+    letter-spacing: 0.2px;
+}
+
+#wifi-loader .text::before,
+#wifi-loader .text::after {
+    content: attr(data-text);
+}
+
+#wifi-loader .text::before {
+    color: var(--text-color);
+}
+
+#wifi-loader .text::after {
+    color: var(--front-color);
+    animation: text-animation76 3.6s ease infinite;
+    position: absolute;
+    left: 0;
+}
+
+@keyframes circle-outer135 {
+    0% {
+        stroke-dashoffset: 25;
+    }
+
+    25% {
+        stroke-dashoffset: 0;
+    }
+
+    65% {
+        stroke-dashoffset: 301;
+    }
+
+    80% {
+        stroke-dashoffset: 276;
+    }
+
+    100% {
+        stroke-dashoffset: 276;
+    }
+}
+
+@keyframes circle-middle6123 {
+    0% {
+        stroke-dashoffset: 17;
+    }
+
+    25% {
+        stroke-dashoffset: 0;
+    }
+
+    65% {
+        stroke-dashoffset: 204;
+    }
+
+    80% {
+        stroke-dashoffset: 187;
+    }
+
+    100% {
+        stroke-dashoffset: 187;
+    }
+}
+
+@keyframes circle-inner162 {
+    0% {
+        stroke-dashoffset: 9;
+    }
+
+    25% {
+        stroke-dashoffset: 0;
+    }
+
+    65% {
+        stroke-dashoffset: 106;
+    }
+
+    80% {
+        stroke-dashoffset: 97;
+    }
+
+    100% {
+        stroke-dashoffset: 97;
+    }
+}
+
+@keyframes text-animation76 {
+    0% {
+        clip-path: inset(0 100% 0 0);
+    }
+
+    50% {
+        clip-path: inset(0);
+    }
+
+    100% {
+        clip-path: inset(0 0 0 100%);
+    }
+}
+
+.header {
+    align-items: center;
+    justify-content: space-around;
+}

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <main>
+
+        <div id="card">
+            <div class="timing">
+                <div class="time"></div>
+                <div class="date"></div>
+            </div>
+            <form action="" id="form">
+                <div class="messageBox">
+                    <input required="" placeholder="Type Your City" type="text" class="messageInput" id="Email" />
+                    <button id="sendButton">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 664 663">
+                            <path fill="none"
+                                d="M646.293 331.888L17.7538 17.6187L155.245 331.888M646.293 331.888L17.753 646.157L155.245 331.888M646.293 331.888L318.735 330.228L155.245 331.888">
+                            </path>
+                            <path stroke-linejoin="round" stroke-linecap="round" stroke-width="33.67" stroke="#6c6c6c"
+                                d="M646.293 331.888L17.7538 17.6187L155.245 331.888M646.293 331.888L17.753 646.157L155.245 331.888M646.293 331.888L318.735 330.228L155.245 331.888">
+                            </path>
+                        </svg>
+                    </button>
+                </div>
+
+            </form>
+
+            <div class="location">
+                <div id="wifi-loader">
+                    <svg class="circle-outer" viewBox="0 0 86 86">
+                        <circle class="back" cx="43" cy="43" r="40"></circle>
+                        <circle class="front" cx="43" cy="43" r="40"></circle>
+                        <circle class="new" cx="43" cy="43" r="40"></circle>
+                    </svg>
+                    <svg class="circle-middle" viewBox="0 0 60 60">
+                        <circle class="back" cx="30" cy="30" r="27"></circle>
+                        <circle class="front" cx="30" cy="30" r="27"></circle>
+                    </svg>
+                    <svg class="circle-inner" viewBox="0 0 34 34">
+                        <circle class="back" cx="17" cy="17" r="14"></circle>
+                        <circle class="front" cx="17" cy="17" r="14"></circle>
+                    </svg>
+                    <div class="text" data-text="Searching"></div>
+                </div>
+            </div>
+
+            <div class="done">
+                <div class="weather"></div>
+                <div class="tempBig"></div>
+                <div class="condition"></div>
+            </div>
+
+
+
+            <div class="row">
+                <div class="div1">
+                    <div id="div2">Type Your city</div>
+                    <div class="value" id="div2value"></div>
+                </div>
+                <div class="div1">
+                    <div id="div3">Type Your city</div>
+                    <div class="value" id="div3value"></div>
+                </div>
+                <div class="div1">
+                    <div id="div4">Type Your city</div>
+                    <div class="value" id="div4value"></div>
+                </div>
+                <div class="div1">
+                    <div id="div5">Type Your city</div>
+                    <div class="value" id="div5value"></div>
+                </div>
+                <!-- <div class="div1">
+                <div id="div6"></div>
+                <div class="value" id="div6value"></div>
+            </div> -->
+            </div>
+
+
+        </div>
+        </div>
+
+
+
+    </main>
+    <script type="module" src="./app.js"></script>
+</body>
+
+</html>
