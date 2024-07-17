@@ -124,6 +124,35 @@ form {
 .condition {
     font-size: 2rem;
 }
+.Footer {
+    z-index: 1;
+    color: black !important;
+    position: fixed;
+    bottom: 0%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+
+
+}
+.Footer div a {
+    text-decoration: none;
+    color: #274970;
+}
+.Footer div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1%;
+    height: 3vh;
+    padding: 2%;
+    /* width: 100%; */
+    font-size: 14px;
+    background-color: #62abff;
+}
+
 
 .div1 {
     display: flex;
