@@ -242,6 +242,9 @@ form {
     .location {
         font-size: 20px;
     }
+    .imgDiv img {
+        width: 130% !important;
+    }
 
     .row {
         width: 90%;

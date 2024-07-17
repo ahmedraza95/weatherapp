@@ -104,7 +104,7 @@ form.addEventListener("submit", async (event) => {
         divtemp5.innerHTML = `${weatherimg}`
         // divtemp5.setAttribute("class" , "imgi");
 
-        condition.innerHTML = `<b>${response.current.condition.text}</b>`
+        condition.innerHTML = `<b>"${response.current.condition.text}"</b>`
 
         temp.innerHTML = `<b>${Math.round(response.current.temp_c)}&#176</b>`
 
